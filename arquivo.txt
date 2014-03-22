@@ -1,4 +1,9 @@
 ﻿Minha primeira alteração online.
 Minha primeira alteração local.
+<<<<<<< HEAD
 Minha alteração teste.
 Outra linha.
+=======
+Mais uma linha.
+Minha alteração teste.
+>>>>>>> e3a9b3964ad51508c0f9527fee41efca9374fcfe
