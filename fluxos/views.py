@@ -28,9 +28,11 @@ def pesquisarFluxos(request):
                     totalreceber = totalreceber + item.valor
                 else:
                     totalpagar = totalpagar + item.valor
+
+                total = totalreceber - totalpagar
         except:
             contas = [Conta(descricao='erro')]
 
-        return render(request, 'fluxos/listarFluxos.html', {'contas': contas, 'nome':nome, 'pessoas': pessoas, 'totalreceber':totalreceber,'totalpagar':totalpagar})
+        return render(request, 'fluxos/listarFluxos.html', {'contas': contas, 'nome':nome, 'pessoas': pessoas, 'totalreceber':totalreceber,'totalpagar':totalpagar, 'total':total})
 
 
