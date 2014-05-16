@@ -1,5 +1,4 @@
-# This Python file uses the following encoding: utf-8
-# ANOTAÇÃO PARA USAR CARACTERES ESPECIAIS AQUI. (MESMO PARA ANOTAÇÕES.)
+
 
 from django.shortcuts import render, HttpResponseRedirect
 from datetime import datetime
@@ -30,7 +29,7 @@ def caixaSalvar(request):
 
         conta.pessoa_id = request.POST.get('pessoa_id', '1')
         conta.tipo = request.POST.get('tipo', '').upper()
-        conta.descricao = request.POST.get('descricao', 'CONTA SEM DESCRIÇÃO').upper()
+        conta.descricao = request.POST.get('descricao', 'CONTA SEM DESCRICAO').upper()
         conta.valor = request.POST.get('valor', '0.00').replace(',','.')
         conta.data = datetime.strptime(request.POST.get('data', ''), '%d/%m/%Y %H:%M:%S')
 
