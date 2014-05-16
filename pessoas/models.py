@@ -1,8 +1,3 @@
-""" 
-@edsonlb
-https://www.facebook.com/groups/pythonmania/
-"""
-
 from django.db import models
 
 class Pessoa(models.Model):

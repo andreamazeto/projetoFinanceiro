@@ -1,12 +1,8 @@
 # This Python file uses the following encoding: utf-8
 # ANOTAÇÃO PARA USAR CARACTERES ESPECIAIS AQUI. (MESMO PARA ANOTAÇÕES.)
-""" 
-@edsonlb
-https://www.facebook.com/groups/pythonmania/
-"""
 
 from django.shortcuts import render, HttpResponseRedirect
-from django.db.models import Q #Queries complexas
+from django.db.models import Q
 from pessoas.models import Pessoa
 
 def index(request):
@@ -14,11 +10,6 @@ def index(request):
 
 def pessoaListar(request):
     pessoas = Pessoa.objects.all()[0:10]
-
-    # TESTE LOCAL PARA VERIFICAR SE A TABELA ESTA LISTANDO
-    #pessoas = []
-    #pessoas.append(Pessoa(nome='NOME1', email='MAIL', telefone='TELEFONE'))
-    #pessoas.append(Pessoa(nome='NOME2'))
 
     return render(request, 'pessoas/listaPessoas.html', {'pessoas': pessoas})
 
@@ -55,7 +46,7 @@ def pessoaPesquisar(request):
                     (Q(nome__contains=textoBusca) |  
                     Q(email__contains=textoBusca) | 
                     Q(telefone__contains=textoBusca) | 
-                    Q(logradouro__contains=textoBusca))).order_by('-nome')  #BUSCA POR NOME OU EMAIL OU TELEFONE OU LOGRADOURO... E É ORDENADO POR NOME.
+                    Q(logradouro__contains=textoBusca))).order_by('-nome') 
         except:
             pessoas = []
 

@@ -1,8 +1,3 @@
-""" 
-@edsonlb
-https://www.facebook.com/groups/pythonmania/
-"""
-
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "projetoFP.settings")
 
