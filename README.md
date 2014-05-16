@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ProjetoFP (Financeiro Pessoal)
 =========
 <br />
@@ -57,3 +58,9 @@ MIT
 
 **- Edson Lopes**
     
+=======
+projeto
+=======
+
+Projeto para testar os comandos do Git.
+>>>>>>> 35cd615daf8b8cccac5e10e1315dfa17225e1737
